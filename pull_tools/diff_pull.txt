@@ -1,0 +1,8 @@
+differ
+!!!!!! Start of ellipsoidob.mc.out !!!!!
+1100c1100
+<  4    SI 11,1 ellipsoid      ********************       10 **********     0.157     3.299       10      0.314
+---
+>  4    SI 11,1 ellipsoid          -0.000    -0.000       10     -0.000     0.157     3.299       10      0.314
+!!!!!! End of ellipsoidob.mc.out !!!!!
+
