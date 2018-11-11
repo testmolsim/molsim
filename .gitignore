@@ -13,3 +13,4 @@ Testin/.current.md5sum
 Testin/diff.out
 .nfs*
 Doc/latex
+pull_tools/.github_API_token
