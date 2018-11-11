@@ -3664,9 +3664,9 @@ subroutine CylDistFunc(iStage)
       call DistFunc2DSample(iStage, nvar, var)
       if(lsim .and. master .and. txstart == 'continue') read(ucnf) var(1:nvar)
       call ScalarSample(iStage, 1, nvarC, varC)
-      if (lsim .and. master .and. txstart == 'continue') read(ucnf) varC(1:nvar)
+      if (lsim .and. master .and. txstart == 'continue') read(ucnf) varC(1:nvarC)
       call ScalarSample(iStage, 1, nvarS, varS)
-      if (lsim .and. master .and. txstart == 'continue') read(ucnf) varS(1:nvar)
+      if (lsim .and. master .and. txstart == 'continue') read(ucnf) varS(1:nvarS)
 
    case (iBeforeMacrostep)
 
