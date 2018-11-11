@@ -6037,8 +6037,10 @@ end subroutine CheckAdsChainSeg
 
 ! ... calculate 2d cluster size distribution
 
+      nsizemax2d = mnsizemax2d
       if (l2d) &
       call ClusterSD2D(mnobj, nobj, iclusteriobj, iobjtloc, mnsizemax2d, ltest, uout, nsizemax2d, nsizedist2d)
+
 
 ! ... number or mass average
 
