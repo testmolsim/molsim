@@ -3726,7 +3726,7 @@ subroutine CylDistFunc(iStage)
       if (master) then
          call ScalarSample(iStage, 1, nvarC, varC)
          call ScalarNorm(iStage, 1, nvarC, varC, 1)
-         if (lsim .and. master) write(ucnf) varC(1:nvar) ! possition ?
+         if (lsim .and. master) write(ucnf) varC(1:nvarC) ! possition ?
          call WriteHead(2, txheadingC, uout)
          call ScalarWrite(iStage, 1, nvarC, varC, 0, '(a,t35,2f15.5)', uout)
       end if
@@ -3734,7 +3734,7 @@ subroutine CylDistFunc(iStage)
       if (master) then
          call ScalarSample(iStage, 1, nvarS, varS)
          call ScalarNorm(iStage, 1, nvarS, varS, 1)
-         if (lsim .and. master) write(ucnf) varS(1:nvar) ! possition ?
+         if (lsim .and. master) write(ucnf) varS(1:nvarS) ! possition ?
          call WriteHead(2, txheadingS, uout)
          call ScalarWrite(iStage, 1, nvarS, varS, 0, '(a,t35,2f15.5)', uout)
       end if
