@@ -111,7 +111,7 @@ ifeq ($(ARCH), LOCAL_INTEL)
   # provide useful info at exceptions (use for debug):
   OPT_debug  := -O0 -traceback -check bounds -check uninit -ftrapuv
   # provides many warnings:
-  OPT_warn   := -warn
+  OPT_warn   := -warn all -warn errors
 
   mode = normal
   ifeq ($(mode),normal)
@@ -168,7 +168,7 @@ ifeq ($(ARCH), LOCAL_GFORTRAN)
   # provide useful info at exceptions (use for debug):
   OPT_debug  := $(OPT_format) -fimplicit-none -fbacktrace -g -fcheck=all -ffpe-trap=zero,overflow -finit-real=nan
   # provides many warnings:
-  OPT_warn   := $(OPT_format) -O0 -Wall -Wno-character-truncation -Wno-conversion -Wno-unused-function
+  OPT_warn   := $(OPT_format) -O0 -Wall -Wno-character-truncation -Wno-conversion -Wno-unused-function -Werror
   # time the execution
   OPT_gprof  := $(OPT_format) -O0 -pg
 

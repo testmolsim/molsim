@@ -1,6 +1,8 @@
 Molsim
 ==============
 
+[![Build Status](https://travis-ci.org/testmolsim/molsim.svg?branch=master)](https://travis-ci.org/testmolsim/molsim)
+
 MOLSIM is an  integrated MC/molecular dynamics/Brownian dynamics simulation package created by [Per Linse in Lund](http://www.polyelectrolytes2002.fkem1.lu.se/). Version 6.4.7. of Molsim is beeing further developed and extended using this git.
 
 Obtaining the Code

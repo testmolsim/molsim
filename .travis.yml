@@ -1,0 +1,20 @@
+dist: xenial
+language: c
+sudo: required
+install:
+  - sudo apt-get install gfortran libfftw3-dev locate libfftw3-3 openmpi-bin openmpi-common libopenmpi-dev build-essential
+  - sudo updatedb
+
+before_script:
+  - ./configure.sh -n
+  - git clone --branch master --single-branch --depth 1 https://github.com/joakimstenhammar/molsim.git stable
+  - cd stable && cp ../version.conf . && cp ../Src/make.* Src/ && cd Testin && make stable && cd ../../
+  - cd Testin/ && ln -s ../stable/Testin/out_stable out_stable && cd ../
+
+script:
+  - cd Testin && make diff && cd ../
+  - cmp --silent pull_tools/diff_pull.txt Testin/diff.out
+  - cd Src && make clean && make all mode=warn && cd ../
+
+after_failure:
+  - diff pull_tools/diff_pull.txt Testin/diff.out
