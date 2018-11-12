@@ -6,6 +6,7 @@ in=$1
 dir=$(dirname $in)
 file=$(basename $in)
 pro=${file%.*}
+error=${2:-0}
 
 molsim="../../Bin/molsim_ser.exe"
 if [ "$dir" == "out_stable" ]; then
@@ -26,4 +27,6 @@ cd $dir && pwd && $molsim $pro; e=$? && cd -
 if [ "$dir" == "out_stable" ]; then
    cat $current > $dir/$pro.version
 fi
-exit $e
+if [ "$error" != "$e" ]; then
+   exit 1
+fi

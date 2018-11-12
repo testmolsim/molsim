@@ -172,6 +172,24 @@ cleanall: clean cleanstable
 %/daniel.cnf:
 	cp $(InDir)/daniel.cnf.save $@
 
+%/sb_x.out: %/sb_x.in
+	$(molsim) $@ 1
+
+%/sb_y.out: %/sb_y.in
+	$(molsim) $@ 1
+
+%/sb_z.out: %/sb_z.in
+	$(molsim) $@ 1
+
+%/sb_z_y090.out: %/sb_z_y090.in
+	$(molsim) $@ 1
+
+%/sb_z_y180.out: %/sb_z_y180.in
+	$(molsim) $@ 1
+
+%/sb_z_xyz.out: %/sb_z_xyz.in
+	$(molsim) $@ 1
+
 $(StableDir)/p.bd.ads2.user: $(StableDir)/p.bd.ads.user
 	cp $< $@
 
