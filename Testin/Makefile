@@ -175,6 +175,9 @@ cleanall: clean cleanstable
 %/sb_x.out: %/sb_x.in
 	$(molsim) $@ 1
 
+%/sb_xz.out: %/sb_xz.in
+	$(molsim) $@ 1
+
 %/sb_y.out: %/sb_y.in
 	$(molsim) $@ 1
 

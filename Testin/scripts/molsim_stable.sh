@@ -28,5 +28,6 @@ if [ "$dir" == "out_stable" ]; then
    cat $current > $dir/$pro.version
 fi
 if [ "$error" != "$e" ]; then
+   echo "ERROR: MOLSIM ended with error code $e, was expecting $error"
    exit 1
 fi
