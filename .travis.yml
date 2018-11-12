@@ -7,7 +7,7 @@ install:
 
 before_script:
   - ./configure.sh -n
-  - git clone --branch master --single-branch --depth 1 https://github.com/joakimstenhammar/molsim.git stable
+  - git clone --branch master --single-branch --depth 1 https://github.com/testmolsim/molsim.git stable
   - cd stable && cp ../version.conf . && cp ../Src/make.* Src/ && cd Testin && make stable && cd ../../
   - cd Testin/ && ln -s ../stable/Testin/out_stable out_stable && cd ../
 

@@ -26,3 +26,4 @@ cd $dir && pwd && $molsim $pro; e=$? && cd -
 if [ "$dir" == "out_stable" ]; then
    cat $current > $dir/$pro.version
 fi
+exit $e
