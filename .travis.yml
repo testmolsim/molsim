@@ -18,3 +18,5 @@ script:
 
 after_failure:
   - diff pull_tools/diff_pull.txt Testin/diff.out
+  - cat Testin/diff.out
+  - cat pull_tools/diff_pull.txt

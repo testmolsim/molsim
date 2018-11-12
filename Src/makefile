@@ -164,7 +164,7 @@ ifeq ($(ARCH), LOCAL_GFORTRAN)
   OPT_normal := $(OPT_format) -O2
   # quick compilation:
   OPT_quick  := $(OPT_format) -O0
-  OPT_test   := $(OPT_normal)
+  OPT_test   := $(OPT_format) -O0
   # provide useful info at exceptions (use for debug):
   OPT_debug  := $(OPT_format) -fimplicit-none -fbacktrace -g -fcheck=all -ffpe-trap=zero,overflow -finit-real=nan
   # provides many warnings:
