@@ -4,6 +4,8 @@ services:
   - docker
 
 script:
+  - pwd
+  - echo $(pwd)
   - docker run -v $(pwd):/molsim/ phebb/molsim
 
 after_failure:
