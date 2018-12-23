@@ -1,0 +1,12 @@
+language: c
+
+services:
+  - docker
+
+script:
+  - docker run -v $(pwd):/molsim/ phebb/molsim
+
+after_failure:
+  - diff pull_tools/diff_pull.txt Testin/diff.out
+  - cat Testin/diff.out
+  - cat pull_tools/diff_pull.txt

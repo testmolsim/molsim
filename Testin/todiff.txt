@@ -170,16 +170,6 @@ bbrush.mc.ads.out
 bbrush.mc.ads.wrl
 dendri.mc.out
 dendri.mc.wrl
-sb_x.out
-sb_xz.out
-sb_xyz.out
-sb_y.out
-sb_z.out
-sb_z_y090.out
-sb_z_y180.out
-sb_z_y030.out
-sb_z_y045.out
-sb_z_xyz.out
 sb_nr.out
 sb_nr.wrl
 sb_mesh.out

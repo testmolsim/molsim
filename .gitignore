@@ -9,7 +9,9 @@ Src/make.arch
 Src/make.fftwpath
 Testin/out/
 Testin/out_stable/
+Testin/out_stable
 Testin/.current.md5sum
 Testin/diff.out
 .nfs*
 Doc/latex
+stable
